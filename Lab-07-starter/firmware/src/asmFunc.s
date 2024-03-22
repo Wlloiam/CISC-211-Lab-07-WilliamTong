@@ -60,12 +60,12 @@ asmFunc:
     
     /*** STUDENTS: Place your code BELOW this line!!! **************/
     /**creating constant value**/
-    .equ constant_value1, 0xffff0000
-    .equ constant_value2, 0x0000ffff
+    .equ constant_value1, 0xFFFF0000
+    .equ constant_value2, 0x0000FFFF
     
     mov r10,r0			//storing the r0,input value from C code, in r10
-    ldr r1,=constant_value1	//storing 0xffff0000 in r1
-    ldr r2,=constant_value2	//storing 0x0000ffff in r2
+    ldr r1,=constant_value1	//storing 0xFFFF0000 in r1
+    ldr r2,=constant_value2	//storing 0x0000FFFF in r2
     ANDS r5,r10,r1		//using logical operator AND to get the value of A, then update the flags, unpacking
     LSR r5,16			//shifting the value in r5 to right 16 times
     BMI Negative1		//if the negative flag is set, will direct to the negative1 branch
